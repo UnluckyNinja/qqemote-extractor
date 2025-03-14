@@ -110,13 +110,13 @@ function receive(worker: Worker, callback: (msg: OutMessage)=>void) {
 </script>
 
 <template>
-  <div class="snap-y snap-mandatory overflow-x-hidden overflow-y-auto h-screen">
+  <div class="snap-y snap-mandatory overflow-x-hidden overflow-y-auto h-100dvh">
     <!-- file drop -->
-    <div class="snap-center relative w-screen h-screen overflow-hidden p-20 mesher-background-A flex flex-col items-center justify-center gap-12 ">
-      <h1 class="text-6xl font-[ChillRoundM]">找回你的<span class="m-8 text-6xl rainbow-text">QQ自定义表情</span></h1>
+    <div class="snap-center relative w-100dvw h-100dvh overflow-hidden p-20 max-sm:p-8 mesher-background-A flex flex-col items-center justify-center gap-12 ">
+      <h1 class="text-6xl max-sm:text-4xl font-[ChillRoundM]">找回你的<span class="m-8 rainbow-text whitespace-nowrap">QQ自定义表情</span></h1>
       <div
         class="
-          rainbow-border h-50% min-h-80 p-4 before:border-4 rounded-lg 
+          rainbow-border h-50% min-h-60 p-4 before:border-4 rounded-lg 
           self-stretch shrink-1
           flex flex-col justify-center items-center gap-4
           backdrop-blur backdrop-contrast-90 cursor-pointer"
@@ -173,7 +173,7 @@ function receive(worker: Worker, callback: (msg: OutMessage)=>void) {
     <!-- save file -->
     <div
       v-if="objectURL || isProcessing" ref="progressPage"
-      class="snap-center relative w-screen h-screen mesher-background-B overflow-hidden p-20 flex flex-col items-center justify-center gap-8">
+      class="snap-center relative w-100dvw h-100dvh mesher-background-B overflow-hidden p-20 max-sm:p-8 flex flex-col items-center justify-center gap-8">
       <div v-if="isProcessing" class="i-fluent-emoji:hourglass-not-done text-6xl" />
       <div v-else class="i-fluent-emoji:check-mark-button text-6xl"/>
       <div class="grid grid-cols-[repeat(3,auto)] auto-cols-auto gap-x-2 children-[*:nth-child(3n+2)]:text-right">
