@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'QQ自定义表情导出',
+      htmlAttrs: {
+        lang: 'zh-Hans-CN'
+      },
+    },
+  },
   future: {
     compatibilityVersion: 4,
   },
