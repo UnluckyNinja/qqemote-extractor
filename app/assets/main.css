@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'ChillRoundM';
+  src: url('public/ChillRoundM.otf') format('opentype');
+}
+
+@keyframes zerone {
+  0% {
+    --zerone-value: 0;
+  }
+  to {
+    --zerone-value: 1;
+  }
+}
+@property --zerone-value {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(120deg, oklch(from #00a98e l c calc(h + 360 * var(--zerone-value))) 30%, oklch(from #009ff7 l c calc(h + 360 * var(--zerone-value))));
+  color: transparent;
+  background-clip: text;
+  animation: zerone 10s linear infinite;
+}
+.rainbow-border {
+  isolation: isolate;
+  box-sizing: border-box;
+  border-width: 0;
+}
+.rainbow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-color: transparent;
+  border-radius: inherit;
+  background-image: conic-gradient(from calc(1turn * var(--zerone-value)) in oklch longer hue, oklch(from #03d9b5 l c calc(h + 0)), #03d9b5);
+  background-clip: border-box;
+  background-origin: border-box;
+  mask: 
+    linear-gradient(#000) padding-box,
+    linear-gradient(#000);
+  mask-composite: exclude;
+  animation: zerone 4s linear infinite;
+}
