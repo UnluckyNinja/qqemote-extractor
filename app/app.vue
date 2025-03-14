@@ -194,7 +194,7 @@ function receive(worker: Worker, callback: (msg: OutMessage)=>void) {
 
       </div>
       <a 
-        v-show="objectURL"
+        :class="objectURL ? '' : 'invisible'"
         class="relative rainbow-border px-4 py-2 before:border-4 rounded bg-zinc-8 text-white"
         :href="objectURL"
         :download="file?.name+'_表情导出_'+Date.now()+'.zip'"
