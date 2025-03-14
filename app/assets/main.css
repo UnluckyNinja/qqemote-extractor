@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ChillRoundM';
-  src: url('public/ChillRoundM.otf') format('opentype');
+  src: url('/ChillRoundM.otf') format('opentype');
 }
 
 @keyframes zerone {
