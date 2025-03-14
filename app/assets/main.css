@@ -38,8 +38,8 @@
   background-clip: border-box;
   background-origin: border-box;
   mask: 
-    linear-gradient(#000) padding-box,
-    linear-gradient(#000);
+    linear-gradient(#000 0 0) padding-box,
+    linear-gradient(#000 0 0);
   mask-composite: exclude;
   animation: zerone 4s linear infinite;
 }
